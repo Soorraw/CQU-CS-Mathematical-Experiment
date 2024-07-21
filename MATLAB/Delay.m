@@ -1,0 +1,9 @@
+clc
+clear
+figure(1)
+%给定延迟量
+delay=[0.5,1];
+%求解时滞微分方程组
+sol=dde23(@Func_Delay,delay,@exer1h,[0,1]);
+%绘制函数图像
+plot(sol.x,sol.y)
